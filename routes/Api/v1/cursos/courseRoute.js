@@ -12,6 +12,11 @@ router.post('/payments',(req,res)=>{
     res.send(payments);
 })
 
+router.get('/payments/:idStudent',(req,res)=>{
+    var studentPayments = payments.find(payment=>payment.idStudent==req.params.idStudent);
+    res.send(studentPayments);
+});
+
 router.post('/validPayment',(req,res)=>{
     var student = req.body.idStudent;
     var course = req.body.idCourse;
