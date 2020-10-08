@@ -1,6 +1,6 @@
 FROM node
 
-WORKDIR /ms-enrollmentcourses
+WORKDIR /ms-paymentcourses
 
 COPY package*.json .
 
